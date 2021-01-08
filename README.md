@@ -7,12 +7,12 @@ Add a stock, delete a stock, manual update from the API, automatic update from t
   Statspage:
 
 Todo:
-[]Main function
-[]Help/Commandpage function
-[]Add stock function
-[]Delete stock function
-[]Manual update stock function
-[]Automatic update stock function
-[]Statistics function
-[]Yahoo Finance API integration
-[]mySQL Testing
+[ ]Main function
+[ ]Help/Commandpage function
+[ ]Add stock function
+[ ]Delete stock function
+[ ]Manual update stock function
+[ ]Automatic update stock function
+[ ]Statistics function
+[ ]Yahoo Finance API integration
+[ ]mySQL Testing
