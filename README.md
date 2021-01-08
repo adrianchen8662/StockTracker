@@ -15,4 +15,4 @@ Todo:
 - [ ] Automatic update stock function
 - [ ] Statistics function
 - [ ] Yahoo Finance API integration
-- [ ] mySQL Testing
+- [ ] mySQL Creation/Integration
