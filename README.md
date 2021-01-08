@@ -21,7 +21,7 @@ Statspage all features:
 - [ ] Performance this year, money and percentage, delta percentage compared to nasdaq and s&p 500
 - [ ] Performance year-to-date, money and percentage, delta percentage compared to nasdaq and s&p 500
 - [ ] Performance since start, money and percentage, delta percentage compared to nasdaq and s&p 500
-- [ ] Percentages of each stock
+- [ ] Percentage holding of each stock
 
 Statspage seperate features: 
 All of the above, but separate
