@@ -1,6 +1,6 @@
 # StockTracker
 
-Python and mySQL project to create an automatic stock tracker that updates using the yahoo finance API. Created out of a need for better statistics than what Robinhood provides. 
+Python and mySQL project to create an automatic stock tracker that updates using the yahoo finance API. Created out of a need for better/cleaner statistics than what Robinhood provides. 
 
 Features:
 Add a stock, delete a stock, manual update from the API, automatic update from the API, and a statspage that tracks various things that I care about. 
