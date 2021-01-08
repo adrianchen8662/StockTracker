@@ -16,7 +16,7 @@ Statspage features:
 
 Todo:
 - [ ] Main function
-- [ ] Help/Commandpage function
+- [X] Help/Commandpage function
 - [ ] Add stock function
 - [ ] Delete stock function
 - [ ] Manual update stock function
