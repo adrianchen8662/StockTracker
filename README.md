@@ -9,7 +9,6 @@ mySQL List Entries:
 StockName varchar(100) - name of the stock
 Ticker varchar(10) - ticker of the stock
 HoldLength varchar(5) - time for speculation(short/long)
-BuyType varchar(10) - share, CallOption, PutOption NOT IMPLEMENTED RIGHT NOW BECAUSE I DONT HAVE ANY OPTIONS NOR DO I KNOW HOW TO TRADE THEM
 PriceBought decimal(5,2) - price per share that it was bought at
 SharesBought decimal(6,6) - amount of shares bought(partial included)
 DateBought date - date bought
@@ -27,7 +26,6 @@ Statspage seperate features:
 All of the above, but separate
 
 Todo:
-- [ ] Main function
 - [X] Help/Commandpage function
 - [ ] Add stock function
 - [ ] Delete stock function
@@ -36,3 +34,8 @@ Todo:
 - [ ] Statistics function - all and individual
 - [ ] Yahoo Finance API integration
 - [ ] mySQL Creation/Integration
+
+Stretch goals:  
+- [ ] Options
+- [ ] GUI
+- [ ] Historical Data/Graphs, maybe interactive
