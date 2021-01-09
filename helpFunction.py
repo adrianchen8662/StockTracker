@@ -8,3 +8,4 @@ def helpFunction():
   print(" * Fields: deleteStock(Ticker)")
   print("updateStock - refreshes the stock listings from the Yahoo Finance API")
   print("checkStats - checks the various statistics of the portfolio")
+  print(" * Fields: checkStats(Ticker) or checkStats(all)")

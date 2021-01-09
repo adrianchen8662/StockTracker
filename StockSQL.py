@@ -9,7 +9,6 @@ print("Importing Yahoo Finance API")
 from yahoo_finance import Share
 
 print("Connecting to mySQL")
-#Main Function
 mydb = mysql.connector.connect(
   host="localhost",
   user="adrian",
