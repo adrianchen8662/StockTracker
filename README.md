@@ -39,3 +39,4 @@ Stretch goals:
 - [ ] Options
 - [ ] GUI
 - [ ] Historical Data/Graphs, maybe interactive
+- [ ] Stock price alerts
