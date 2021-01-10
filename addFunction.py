@@ -13,4 +13,4 @@ def addStock():
   price = input()
 
 
-  print("Stock " + + " successfully added!"
+  print("Stock " + "nothing" + " successfully added!")
