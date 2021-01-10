@@ -3,6 +3,10 @@
 print("StockTracker, built by Adrian")
 print("Importing functions")
 import helpFunction
+import addFunction
+import checkFunction
+import deleteFunction
+import updateFunction
 print("Importing mysql connector")
 import mysql.connector
 print("Importing Yahoo Finance API")
