@@ -10,7 +10,22 @@ from mysql.connector import (connection)
 
 print("Connecting to mySQL server")
 try:
-  mydb = mysql.connector.connect (user='adrian', password = 'HaoRan8662@', host = 'localhost', database = 'mydatabase')
+  mydb = mysql.connector.connect(
+    user='adrian',
+    password = '[redacted]',
+    host = 'localhost',
+    database = 'mydatabase')
+except mysql.connector.Error as err:
+  if err.errno == errorcode.ER_ACCESS_DENIED_ERROR:
+    print("Something is wrong with your username or password!")
+  elif err.errno == errorcode.ER_BAD_DB_ERROR:
+    print("Database does not exist")
+  else:
+    print(err)
+else:
+  mydb.close()
+  
+cursor = mydb.cursor()
 
 print("Connected to mySQL server")
 
@@ -73,6 +88,7 @@ while end == False:
   # ends the program
   elif(inputCommand == "end"):
     print("Ending session")
+    mydb.close()
     end = True
 
   # catches invalid queries
