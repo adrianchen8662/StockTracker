@@ -34,25 +34,25 @@ while end == False:
   # Adds a stock to tracking in the mySQL Database. Also verifies it exists. 
   elif(inputCommand == "addStock"):
     print("What is the ticker?")
-    ticker = input()
+    ticker = str(input())
     print("How long are you expecting to hold?(Short/Long)")
-    holdLength = input()
+    holdLength = str(input())
     print("How many shares have been bought?")
-    sharesBought = input()
+    sharesBought = float(input())
     print("What day did you buy them?(YYYY-MM-DD)")
-    dateBought = input()
+    dateBought = str(input())
     print("What price did you buy them at?")
-    price = input()
+    price = float(input())
     print("Checking the stock on the yahoo finance API")
     stockTicker = yfinance.Ticker(ticker)
     print("Stock found! Creating mySQL entry")
     stockInfo = stockTicker.info
     stockName = stockInfo['longName']
 
-    sql = "INSERT INTO Stocks(SN, T, HL, PB, SB, DB) VALUES (%s %s %s %f %f %s)"
+    sql = "INSERT INTO Stocks(StockName, Ticker, HoldLength, PriceBought, SharesBought, DateBought) VALUES (%s %s %s %f %f %s)"
     val = (stockName, ticker, holdLength, price, sharesBought, dateBought)
-
-    print(price + " dollars of stock from " + stockName + " successfully added!")
+    cost = "{:.2f}".format(sharesBought*price)
+    print(cost + " dollars of stock from " + stockName + " successfully added!")
   
   # deletes a stock from tracking
   elif(inputCommand == "deleteStock"):
