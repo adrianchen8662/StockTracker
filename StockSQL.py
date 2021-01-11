@@ -7,6 +7,8 @@ print("Importing mysql")
 import mysql.connector
 from mysql.connector import errorcode
 from mysql.connector import (connection)
+print("Importing time")
+import datetime
 
 print("Connecting to mySQL server")
 try:
@@ -22,8 +24,6 @@ except mysql.connector.Error as err:
     print("Database does not exist")
   else:
     print(err)
-else:
-  mydb.close()
   
 cursor = mydb.cursor()
 
@@ -49,7 +49,7 @@ while end == False:
   elif(inputCommand == "addStock"):
     print("What is the ticker?")
     ticker = str(input())
-    print("How long are you expecting to hold?(Short/Long)")
+    print("How long are you expecting to hold?(Short/Mid/Long)")
     holdLength = str(input())
     print("How many shares have been bought?")
     sharesBought = float(input())
@@ -62,9 +62,15 @@ while end == False:
     print("Stock found! Creating mySQL entry")
     stockInfo = stockTicker.info
     stockName = stockInfo['longName']
+    
+    dateformat = "%Y-%m-%d"
+    now = datetime.datetime.strptime(dateBought,dateformat)
+    now.strftime(dateformat)
 
-    sql = "INSERT INTO Stocks(StockName, Ticker, HoldLength, PriceBought, SharesBought, DateBought) VALUES (%s %s %s %f %f %s)"
-    val = (stockName, ticker, holdLength, price, sharesBought, dateBought)
+    sql = "INSERT INTO Stocks(StockName, Ticker, HoldLength, PriceBought, SharesBought, DateBought) VALUES (%s, %s, %s, %s, %s, %s)"
+    val = (stockName, ticker, holdLength, price, sharesBought, now)
+    cursor.execute(sql, val)
+    mydb.commit()
     cost = "{:.2f}".format(sharesBought*price)
     print(cost + " dollars of stock from " + stockName + " successfully added!")
   
@@ -88,6 +94,7 @@ while end == False:
   # ends the program
   elif(inputCommand == "end"):
     print("Ending session")
+    cursor.close()
     mydb.close()
     end = True
 
