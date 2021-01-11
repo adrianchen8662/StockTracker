@@ -5,14 +5,13 @@ print("Importing yfinance")
 import yfinance
 print("Importing mysql")
 import mysql.connector
+from mysql.connector import errorcode
+from mysql.connector import (connection)
 
-mydb = mysql.connector.connect(
-  host = "localhost",
-  user = "adrian",
-  password = "HaoRan8662@",
-  database = "mydatabase"
-)
-mycursor = mydb.cursor()
+print("Connecting to mySQL server")
+try:
+  mydb = mysql.connector.connect (user='adrian', password = 'HaoRan8662@', host = 'localhost', database = 'mydatabase')
+
 print("Connected to mySQL server")
 
 end = False
