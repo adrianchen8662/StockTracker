@@ -14,7 +14,7 @@ print("Connecting to mySQL server")
 try:
   mydb = mysql.connector.connect(
     user='adrian',
-    password = '[redacted]',
+    password = 'HaoRan8662@',
     host = 'localhost',
     database = 'mydatabase')
 except mysql.connector.Error as err:
@@ -76,11 +76,26 @@ while end == False:
   
   # deletes a stock from tracking
   elif(inputCommand == "deleteStock"):
-    print("To be implemented")
+    print("What is the stock ticker of the stock being deleted?")
+    stock = str(input())
+    stockTicker = yfinance.Ticker(stock)
+    stockInfo = stockTicker.info
+    stockName = stockInfo['longName']
+    print("Deleting " + stockName)
+    sql = "DELETE FROM Stocks WHERE Ticker = %s"
+    val = (stock,)
+    cursor.execute(sql,val)
+    mydb.commit()
+    print("Stock " + stockName + " removed from the database")
 
   # update stock command
   elif(inputCommand == "updateStock"):
-    print("To be implemented")
+    print("Do you want to update a specific stock or all?")
+    inputString = input()
+    if(inputString == "all"):
+      
+    else:
+      
 
   # check statistics command
   elif(inputCommand == "checkStats"):
