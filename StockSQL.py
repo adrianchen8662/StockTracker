@@ -14,7 +14,7 @@ print("Connecting to mySQL server")
 try:
   mydb = mysql.connector.connect(
     user='adrian',
-    password = 'HaoRan8662@',
+    password = '[redacted]',
     host = 'localhost',
     database = 'mydatabase')
 except mysql.connector.Error as err:
