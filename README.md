@@ -28,12 +28,12 @@ All of the above, but separate
 Todo:
 - [X] Help/Commandpage function
 - [X] Add stock function (Missing mySQL integration)
-- [ ] Delete stock function
+- [X] Delete stock function
 - [ ] Manual update stock function
 - [ ] Automatic update stock function
 - [ ] Statistics function - all and individual
 - [X] Yahoo Finance API integration
-- [ ] mySQL Creation/Integration
+- [X] mySQL Creation/Integration
 
 Stretch goals:  
 - [ ] Options
